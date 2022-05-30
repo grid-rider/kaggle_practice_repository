@@ -1,8 +1,15 @@
-import pandas as pd
+import pandas as pd 
+
+def returner(x):
+    print(x.Jens)
+    return 0 
+
+df = pd.DataFrame({"Armin": [1,2,3], "Jens":[2,3,4]}, index=["one","two","three"])
+
+arr = [1,2,3,4,5]
+
+inline = [value for value in arr]
+print(inline)
 
 
-a = pd.DataFrame({"Coloumn_1": [1,2], "Coloumn_2": [3,4]})
-b = pd.DataFrame({"Coloumn_1": [1,2], "Coloumn_2": [3,4]}, index = ["row1","row2"])
 
-print(a)
-print(b)
