@@ -1,15 +1,15 @@
 import pandas as pd 
+from sklearn.impute import SimpleImputer
 
 def returner(x):
     print(x.Jens)
     return 0 
 
-df = pd.DataFrame({"Armin": [1,2,3], "Jens":[2,3,4]}, index=["one","two","three"])
+df = pd.DataFrame({"Armin": [1,None,None], "Jens":[2,3,4]}, index=["one","two","three"])
 
-arr = [1,2,3,4,5]
+imputer = SimpleImputer()
 
-inline = [value for value in arr]
-print(inline)
+print(imputer.fit_transform(df))
 
 
 
